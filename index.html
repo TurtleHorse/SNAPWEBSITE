@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <div class="row">
+      <nav class="row landing__page--nav">
+        <div class="link__list--container">
+          <img class="logo" src="./images/logo.svg" alt="" />
+          <div
+            id="toggleHiddenFeature"
+            class="drop__down__menu--features hidden"
+          >
+            <div class="elements">
+              <img class="icons" src="./images/icon-todo.svg" alt="" /><a
+                class="features__list--elm"
+                href=""
+                >To do List</a
+              >
+            </div>
+            <div class="elements">
+              <img class="icons" src="./images/icon-calendar.svg" alt="" /><a
+                class="features__list--elm"
+                href=""
+                >Calendar</a
+              >
+            </div>
+            <div class="elements">
+              <img class="icons" src="./images/icon-reminders.svg" alt="" /><a
+                class="features__list--elm"
+                href=""
+                >Reminders</a
+              >
+            </div>
+            <div class="elements">
+              <img class="icons" src="./images/icon-planning.svg" alt="" /><a
+                class="features__list--elm"
+                href=""
+                >Planning</a
+              >
+            </div>
+          </div>
+          <a
+            href="#"
+            onclick="toggleHidden(toggleHiddenFeature); toggleArrow(arrow__down, arrow__up)"
+            class="nav__element"
+          >
+            Features
+            <img
+              id="arrow__down"
+              class="arrow__down"
+              src="./images/icon-arrow-down.svg"
+            />
+            <img
+              id="arrow__up"
+              class="arrow__up hidden"
+              src="./images/icon-arrow-up.svg"
+            />
+          </a>
+          <div id="hideremovecompany" class="drop__down__menu--company hidden">
+            <a class="company__list--elm" href="">History</a>
+            <a class="company__list--elm" href="">Our Team</a>
+            <a class="company__list--elm" href="">Blog</a>
+          </div>
+          <a
+            href="#"
+            onclick="toggleHidden(hideremovecompany); toggleArrow(arrow__down1, arrow__up1)"
+            class="nav__element company"
+          >
+            Company
+            <img
+              id="arrow__down1"
+              class="arrow__down"
+              src="./images/icon-arrow-down.svg"
+            />
+            <img
+              id="arrow__up1"
+              class="arrow__up hidden"
+              src="./images/icon-arrow-up.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <a href="" class="nav__element careers">Careers</a>
+        <a href="" class="nav__element about">About</a>
+        <div class="btn__container">
+          <button class="btn login__btn">Login</button>
+          <button class="btn register__btn">Register</button>
+        </div>
+        <button class="hamburger">
+          <div class="bar"></div>
+        </button>
+      </nav>
+      <!-----------MOBILE NAV-------------->
+      <nav class="mobile-nav">
+        <div class="mobile__link__list--container">
+          <a
+            class="features"
+            href="#"
+            onclick="toggleHidden(mobilehiddenfeature);toggleArrow(mobile__arrow__down, mobile__arrow__up)"
+          >
+            Features
+            <img
+              id="mobile__arrow__down"
+              class="arrow__down"
+              src="./images/icon-arrow-down.svg"
+            />
+            <img
+              id="mobile__arrow__up"
+              class="arrow__up hidden"
+              src="./images/icon-arrow-up.svg"
+            />
+          </a>
+          <div class="mobile__links--features">
+            <div id="mobilehiddenfeature" class="mobile__links--wrapper hidden">
+              <div class="link marginadjust">
+                <img src="./images/icon-todo.svg" alt="" href="" /><span>
+                  To do list</span
+                >
+              </div>
+              <div class="link marginadjust">
+                <img src="./images/icon-calendar.svg" alt="" />
+                <span>Calendar</span>
+              </div>
+              <div class="link marginadjust">
+                <img src="./images/icon-reminders.svg" alt="" />
+                <span>Reminders</span>
+              </div>
+              <div class="link marginadjust">
+                <img src="./images/icon-planning.svg" alt="" />
+                <span>Planning</span>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#"
+            onclick="toggleHidden(mobile__hideremovecompany); toggleArrow(mobile__arrow__down1, mobile__arrow__up1)"
+            >Company
+            <img
+              id="mobile__arrow__down1"
+              class="mobile__arrow__down"
+              src="./images/icon-arrow-down.svg"
+              alt=""
+            />
+            <img
+              id="mobile__arrow__up1"
+              class="mobile__arrow__up hidden"
+              src="./images/icon-arrow-up.svg"
+              alt=""
+            />
+            <div
+              id="mobile__hideremovecompany"
+              class="mobile__links--company hidden"
+            >
+              <div class="links__company">
+                <span class="link " href="">History</span>
+                <span class="link" href="">Our Team</span>
+                <span class="link" href="">Blog</span>
+              </div>
+            </div>
+          </a>
+          <a href="">Careers</a>
+          <a href="">About</a>
+          <button class="btn login__btn">Login</button>
+          <button class="btn register__btn">Register</button>
+        </div>
+      </nav>
+      <!------------------END-MOBILE-NAV--------------->
+    </div>
+    <div class="row row2">
+      <div class="wrapper">
+        <div class="main__info">
+          <h1 class="landing__title">
+            Make <br />
+            remote work
+          </h1>
+          <div class="landing__para--container">
+            <p class="landing__paragraph">
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+          </div>
+          <button class="btn btn__learn--more">Learn more</button>
+          <div class="quad__img--container">
+            <img class="images4" src="./images/client-databiz.svg" alt="" />
+            <img class="images4" src="./images/client-audiophile.svg" alt="" />
+            <img class="images4" src="./images/client-maker.svg" alt="" />
+            <img class="images4" src="./images/client-meet.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="main__img--container">
+        <img class="main__img" src="./images/image-hero-desktop.png" alt="" />
+        <img
+          class="main__img--mobile hidden"
+          src="./images/image-hero-mobile.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
